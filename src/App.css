@@ -1,7 +1,7 @@
 .Nav {
   display: flex;
   align-items: flex-end;
-  background: #453e3d;
+  background: #0d1117;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -10,7 +10,7 @@
 .secondNav {
   width: 100%;
   padding-top: 30px;
-  background-color: #f2f5f3;
+  background-color: #fafbfc;
   padding-bottom: 10px;
 }
 
@@ -35,7 +35,7 @@
 .buttonC {
   padding: 6px 10px;
   font-size: 12px;
-  border: 1px solid #cbd4d3;
+  border: 1px solid #f6f8fa;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
@@ -43,7 +43,7 @@
 .buttonN {
   padding: 6px 10px;
   font-size: 13px;
-  border: 1px solid #cbd4d3;
+  border: 1px solid #f6f8fa;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -61,7 +61,7 @@
     justify-content: center;
     padding: 0 !important;
     padding-top: 10px !important;
-    background-color: #f2f5f3;
+    background-color: #fafbfc;
   }
   .newissue {
     margin-top: 10px !important;
@@ -118,7 +118,7 @@
   padding-top: 30px;
   display: flex;
   justify-content: space-evenly;
-  background-color: #f2f5f3;
+  background-color: #fafbfc;
 
   font-size: 16px;
   font-weight: 500;
@@ -148,9 +148,9 @@
 }
 
 .thirdNavContentNumber {
-  border: 1px solid #cbd4d3;
+  border: 1px solid #f6f8fa;
   border-radius: 6px;
-  background-color: #cbd4d3;
+  background-color: #f6f8fa;
   padding: 0px 2px;
   text-align: center;
   font-size: 15px;
@@ -171,20 +171,20 @@
 .filtersContent {
   padding-right: 8px;
   padding-left: 8px;
-  border: 1px solid #cbd4d3;
+  border: 1px solid #f6f8fa;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 
-  background-color: #f2f5f3;
+  background-color: #fafbfc;
 }
 
 .search {
   width: 100%;
-  border: 1px solid #cbd4d3;
+  border: 1px solid #f6f8fa;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 
-  background-color: #f2f5f3;
+  background-color: #fafbfc;
 }
 .searchIcon {
   padding: 6px;
@@ -195,20 +195,20 @@
   padding: 0px 6px;
 }
 .labels {
-  border: 1px solid #cbd4d3;
+  border: 1px solid #f6f8fa;
   padding-right: 12px;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
 .miles {
-  border: 1px solid #cbd4d3;
+  border: 1px solid #f6f8fa;
   padding-right: 12px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
 
 .newissue {
-  border: 1px solid #cbd4d3;
+  border: 1px solid #f6f8fa;
   padding: 3px 12px;
   font-size: 14px;
   font-weight: 600;
@@ -235,10 +235,9 @@
 }
 
 .content {
-  border: 1px solid #cbd4d3;
-  border-radius: 6px;
+  border: 2px solid #f6f8fa;
+  border-radius: 10px !important;
 }
-
 .contentHead {
   background-color: #b8c2cf;
   padding: 10px 25px;
@@ -252,6 +251,11 @@
 .tablerowcon :hover {
   margin-top: 0px !important;
   background-color: #b8c2cf;
+}
+
+.tablerow1 {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .tablerow1 {
@@ -275,6 +279,7 @@
 
 .tablecomments {
   margin-left: auto;
+  padding-right: 2%;
 }
 
 .tableicon {
@@ -287,7 +292,7 @@
   margin-top: 0px !important;
   font-size: 12px;
   padding: 2px 4px;
-  border: 1px solid #cbd4d3;
+  border: 1px solid #f6f8fa;
   border-radius: 6px;
 }
 .outer {
@@ -307,6 +312,7 @@
 .tablerow2 {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 8px;
 
   padding-left: 10px;
 }
