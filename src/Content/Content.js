@@ -5,42 +5,18 @@ import { FaRegDotCircle, FaCaretDown, FaRegCommentAlt } from "react-icons/fa";
 
 import UserService from "../utils/UserService";
 
-// const TOTAL_PAGES = 1000;
-
 const Content = () => {
   const [tableData, setTableData] = useState([]);
-  //   const [isFetching, setIsFetching]= useInfiniteScroll(getData)
   const [loading, setLoading] = useState(false);
   const [noData, setNoData] = useState(false);
   const [page, setPage] = useState(1);
-
-  const height = Math.max(
-    document.body.scrollHeight,
-    document.body.offsetHeight,
-    document.documentElement.clientHeight,
-    document.documentElement.scrollHeight,
-    document.documentElement.offsetHeight
-  );
-
-  window.onscroll = () => {
-    if (window.innerHeight + document.documentElement.scrollTop < height - 50) {
-      if (!noData) {
-        loadUserList(page);
-      }
-    }
-  };
-
-  useEffect(() => {
-    loadUserList(page);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const loadUserList = (page) => {
     setLoading(true);
     UserService.getList(page)
       .then((res) => {
         const newPage = page + 1;
-        console.log(res);
+
         const newList = tableData.concat(res.data);
         setTableData(newList);
         setPage(newPage);
@@ -54,7 +30,21 @@ const Content = () => {
       });
   };
 
-  console.log(tableData);
+  window.onscroll = () => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop ===
+      document.documentElement.offsetHeight
+    ) {
+      if (!noData) {
+        loadUserList(page);
+      }
+    }
+  };
+
+  useEffect(() => {
+    loadUserList(page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   //   useEffect(() => {
   //     axios

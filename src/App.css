@@ -133,7 +133,7 @@
 .thirdNavS :hover {
   text-decoration: underline;
   text-decoration-color: crimson;
-  text-decoration-style: 4px solid;
+  text-decoration-style: solid;
 }
 
 .thirdNavIcon {
