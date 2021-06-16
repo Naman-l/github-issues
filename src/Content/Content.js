@@ -152,7 +152,13 @@ const Content = () => {
                         {v?.labels.map((n) => (
                           // eslint-disable-next-line no-sequences
                           <span className="outer">
-                            <span className="tableissue"> {n?.name}</span>
+                            <span
+                              className="tableissue"
+                              style={{ backgroundColor: `#${n.color}` }}
+                            >
+                              {" "}
+                              {n?.name}
+                            </span>
                           </span>
                         ))}
                       </td>

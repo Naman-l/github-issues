@@ -36,14 +36,8 @@ const Header = () => {
       });
   }, []);
 
-  const handleClick1 = () => {
-    setWatchers_count(watchers_count + 1);
-  };
-  const handleClick2 = () => {
-    setForks_count(forks_count + 1);
-  };
-  const handleClick3 = () => {
-    setSubscribers_count(subscribers_count + 1);
+  const handleClick = (type, funct) => {
+    funct(type + 1);
   };
   return (
     <>
@@ -70,7 +64,10 @@ const Header = () => {
             <button className="buttonC">
               <FaEye /> Watch
             </button>
-            <button className="buttonN" onClick={handleClick1}>
+            <button
+              className="buttonN"
+              onClick={() => handleClick(watchers_count, setWatchers_count)}
+            >
               {watchers_count}
             </button>
           </span>
@@ -78,7 +75,12 @@ const Header = () => {
             <button className="buttonC">
               <FaStar /> Unstar
             </button>
-            <button className="buttonN" onClick={handleClick3}>
+            <button
+              className="buttonN"
+              onClick={() =>
+                handleClick(subscribers_count, setSubscribers_count)
+              }
+            >
               {subscribers_count}
             </button>
           </span>
@@ -86,7 +88,10 @@ const Header = () => {
             <button className="buttonC">
               <FaCodeBranch /> fork
             </button>
-            <button className="buttonN" onClick={handleClick2}>
+            <button
+              className="buttonN"
+              onClick={() => handleClick(forks_count, setForks_count)}
+            >
               {forks_count}
             </button>
           </span>
