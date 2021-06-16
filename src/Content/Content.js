@@ -23,10 +23,7 @@ const Content = () => {
   );
 
   window.onscroll = () => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop <
-      height - 200
-    ) {
+    if (window.innerHeight + document.documentElement.scrollTop < height - 50) {
       if (!noData) {
         loadUserList(page);
       }
@@ -109,9 +106,9 @@ const Content = () => {
   //   };
 
   return (
-    <>
+    <div className="check">
       <div className="content">
-        <div className="contentHead">
+        <span className="contentHead">
           <span className="contentcontent">
             <span>Author</span>{" "}
             <span>
@@ -148,47 +145,49 @@ const Content = () => {
               <FaCaretDown />
             </span>
           </span>
-        </div>
+        </span>
         <div>
           <table style={{ width: "100%" }}>
             {tableData?.map((v) => (
-              <div className="tablerowcon">
-                <tr className="tablerow1">
-                  <td className="td1">
-                    <span className="tableicon">
-                      <FaRegDotCircle />
-                    </span>
-                    <span className="tabletitle">{v?.title}</span>
+              <span className="tablerowcon">
+                <>
+                  <tr className="tablerow1">
+                    <span className="wrapper">
+                      <td className="td1">
+                        <span className="tableicon">
+                          <FaRegDotCircle />
+                        </span>
+                        <span className="tabletitle">{v?.title}</span>
 
-                    {v?.labels.map((n) => (
-                      // eslint-disable-next-line no-sequences
-                      <span className="outer">
-                        <span className="tableissue"> {n?.name}</span>
-                      </span>
-                    ))}
-                  </td>
-                  <td className="tablecomments">
-                    <span>
+                        {v?.labels.map((n) => (
+                          // eslint-disable-next-line no-sequences
+                          <span className="outer">
+                            <span className="tableissue"> {n?.name}</span>
+                          </span>
+                        ))}
+                      </td>
+                    </span>
+                    <td className="tablecomments">
                       {v?.comments > 0 ? <FaRegCommentAlt size="14px" /> : ""}
 
                       {v?.comments > 0 ? v?.comments : ""}
-                    </span>
-                  </td>
-                </tr>
-                <tr className="tablerow2">
-                  <td>
-                    <span className="tablenumber">#{v?.number}</span>
-                    <span className="tabletime">
-                      opened {moment(v?.updated_at).fromNow()} by{" "}
-                      {v?.user.login}
-                    </span>
-                  </td>
-                </tr>
+                    </td>
+                  </tr>
+                  <tr className="tablerow2">
+                    <td>
+                      <span className="tablenumber">#{v?.number}</span>
+                      <span className="tabletime">
+                        opened {moment(v?.updated_at).fromNow()} by{" "}
+                        {v?.user.login}
+                      </span>
+                    </td>
+                  </tr>
 
-                <hr
-                  style={{ color: "#cbd4d3", width: "100%", margin: "0px" }}
-                />
-              </div>
+                  <hr
+                    style={{ color: "#cbd4d3", width: "100%", margin: "0px" }}
+                  />
+                </>
+              </span>
             ))}
           </table>
 
@@ -196,7 +195,7 @@ const Content = () => {
           {noData ? <div className="text-center">no data anymore ...</div> : ""}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

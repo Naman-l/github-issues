@@ -77,6 +77,27 @@
   .extra {
     display: none !important;
   }
+  .tablerow1 {
+    font-size: 12px !important;
+  }
+  .tablerow2 {
+    font-size: 12px !important;
+  }
+  .contentcontent {
+    font-size: 12px !important;
+  }
+  .fourthNav {
+    font-size: 12px !important;
+  }
+  .thirdNavContent {
+    font-size: 12px !important;
+  }
+  .thirdNavContentNumber {
+    font-size: 12px !important;
+  }
+  .buttonC {
+    font-size: 12px !important;
+  }
 }
 @media screen and (max-width: 450px) {
   .buttonC {
@@ -214,9 +235,6 @@
 }
 
 .content {
-  margin-left: 6%;
-  margin-right: 6%;
-
   border: 1px solid #cbd4d3;
   border-radius: 6px;
 }
@@ -231,23 +249,42 @@
   padding: 5px 5px;
 }
 
-.tablerowcon {
-  width: 100%;
-  padding: 0px 0px;
+.tablerowcon :hover {
+  margin-top: 0px !important;
+  background-color: #b8c2cf;
 }
 
 .tablerow1 {
+  margin-top: 0px !important;
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-left: 10px;
   font-weight: 600;
   font-size: 16px;
 }
+.td1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tablecomments {
+  margin-left: auto;
+}
 
 .tableicon {
+  margin-top: 0px !important;
   padding-right: 10px;
-  padding-left: 10px;
   color: green;
 }
 
 .tableissue {
+  margin-top: 0px !important;
   font-size: 12px;
   padding: 2px 4px;
   border: 1px solid #cbd4d3;
@@ -282,4 +319,8 @@
   font-size: 20px;
   width: 100%;
   text-align: center;
+}
+
+.check {
+  margin: 0 6%;
 }
