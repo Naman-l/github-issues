@@ -81,7 +81,7 @@ const Header = () => {
                 handleClick(subscribers_count, setSubscribers_count)
               }
             >
-              <FaStar /> Unstar
+              <FaStar /> Star
             </button>
             <button
               className="buttonN"
