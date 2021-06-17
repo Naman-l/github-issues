@@ -61,7 +61,10 @@ const Header = () => {
         </span>
         <span className="secondNav2">
           <span className="buttonspan">
-            <button className="buttonC">
+            <button
+              className="buttonC"
+              onClick={() => handleClick(watchers_count, setWatchers_count)}
+            >
               <FaEye /> Watch
             </button>
             <button
@@ -72,7 +75,12 @@ const Header = () => {
             </button>
           </span>
           <span className="buttonspan">
-            <button className="buttonC">
+            <button
+              className="buttonC"
+              onClick={() =>
+                handleClick(subscribers_count, setSubscribers_count)
+              }
+            >
               <FaStar /> Unstar
             </button>
             <button
@@ -85,7 +93,10 @@ const Header = () => {
             </button>
           </span>
           <span className="buttonspan">
-            <button className="buttonC">
+            <button
+              className="buttonC"
+              onClick={() => handleClick(forks_count, setForks_count)}
+            >
               <FaCodeBranch /> fork
             </button>
             <button
